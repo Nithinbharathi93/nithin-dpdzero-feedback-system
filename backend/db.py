@@ -1,6 +1,6 @@
 import sqlite3
 
-DB_NAME = "database.db"
+DB_NAME = "feedbackdb.db"
 
 def init_db():
     conn = sqlite3.connect(DB_NAME)
