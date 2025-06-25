@@ -6,7 +6,7 @@ import "../App.css";
 import "../styles/feedback-form.css";
 
 export const FeedbackForm = () => {
-  const { employeeId } = useParams(); // from route /create-feedback/:employeeId
+  const { employeeId } = useParams();
   const navigate = useNavigate();
   const [employeeName, setEmployeeName] = useState("Loading...");
   const [strengths, setStrengths] = useState("");
@@ -14,7 +14,6 @@ export const FeedbackForm = () => {
   const [sentiment, setSentiment] = useState("positive");
   const server_api = import.meta.env.VITE_SERVER_API;
 
-  // Get employee name using the employeeId param
   useEffect(() => {
     const fetchEmployee = async () => {
       try {

@@ -18,7 +18,6 @@ const EditFeedback = () => {
   useEffect(() => {
     const fetchFeedbackAndName = async () => {
       try {
-        // Step 1: Fetch the existing feedback
         const res = await fetch(`${server_api}feedback/single/${feedbackId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("jwt_token")}`,
@@ -33,7 +32,6 @@ const EditFeedback = () => {
         setImprovements(data.improvements);
         setSentiment(data.sentiment);
 
-        // Step 2: Fetch employee name using employeeId from feedback
         const teamRes = await fetch(`${server_api}users/team`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("jwt_token")}`,

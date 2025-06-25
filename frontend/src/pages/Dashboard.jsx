@@ -11,7 +11,6 @@ const MainDashboard = () => {
   const navigate = useNavigate();
   const server_api = import.meta.env.VITE_SERVER_API;
 
-  // Fetch logged-in user
   useEffect(() => {
     const fetchUser = async () => {
       const token = localStorage.getItem("jwt_token");
@@ -33,7 +32,6 @@ const MainDashboard = () => {
     fetchUser();
   }, [navigate]);
 
-  // Fetch team members (for manager)
   useEffect(() => {
     if (!user || user.role !== "manager") return;
 
@@ -54,7 +52,6 @@ const MainDashboard = () => {
     fetchTeam();
   }, [user]);
 
-  // Fetch selected employee feedback (for manager)
   useEffect(() => {
     if (!selectedUser) return;
 
@@ -78,7 +75,6 @@ const MainDashboard = () => {
     fetchFeedbacks();
   }, [selectedUser]);
 
-  // Fetch employee's own feedback
   useEffect(() => {
     if (!user || user.role !== "employee") return;
 
@@ -102,7 +98,6 @@ const MainDashboard = () => {
     fetchMyFeedbacks();
   }, [user]);
 
-  // Acknowledge
   const handleAcknowledge = async (fid) => {
     try {
       const res = await fetch(

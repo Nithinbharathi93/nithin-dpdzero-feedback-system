@@ -186,6 +186,16 @@ def employee_dashboard():
 
     return jsonify([dict(r) for r in rows])
 
+@app.route("/api/dev/reset-db", methods=["GET"])
+def reset_database():
+    try:
+        if os.path.exists("feedbackdb.db"):
+            os.remove("feedbackdb.db")
+        init_db()
+        return jsonify({ "msg": "Database has been reset and rebuilt." }), 200
+    except Exception as e:
+        return jsonify({ "error": str(e) }), 500
+
 if __name__ == "__main__":
     import os
     port = int(os.getenv("PORT", 3000))
