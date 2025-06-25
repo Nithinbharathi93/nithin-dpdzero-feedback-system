@@ -55,7 +55,7 @@ Built with **Flask** and uses **SQLite** for data persistence. JWT is used for u
 
 ## Here you can see the flowchart
 
-![Flowchart](./assets/flowchart.png)
+![Flowchart](./assets/flowchart-new.png)
 
 ---
 
