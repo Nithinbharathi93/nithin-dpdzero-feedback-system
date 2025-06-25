@@ -1,0 +1,62 @@
+h3 {
+  text-align: center;
+}
+
+.fd-form, .glass-back {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 36rem;
+}
+
+.glass-back {
+  width: fit-content;
+}
+
+.fd-inp-ful {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: inherit;
+}
+
+.fd-nm {
+  width: 100%;
+}
+
+.fd-nm-inp {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fd-long-par {
+  display: flex;
+  flex-direction: column;
+}
+
+.fd-txtarea {
+  width: inherit;
+  height: 128px;
+}
+
+.fd-srv-rad {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.fd-brk {
+  margin-bottom: 1rem;
+}

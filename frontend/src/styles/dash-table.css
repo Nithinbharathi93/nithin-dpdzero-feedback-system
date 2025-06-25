@@ -1,0 +1,150 @@
+/* Table Container */
+.table-wrapper {
+    margin: 2rem auto;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 1rem; /* Add padding for smaller screens */
+  }
+  
+  /* Main Table Style */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    max-width: 100%; /* Changed from 80vw to full for mobile layout */
+  }
+  
+  /* Table Header */
+  thead {
+    background-color: #2b2b2b;
+    color: white;
+  }
+  
+  thead th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  /* Table Body */
+  tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f9ff;
+  }
+  
+  tbody td {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  /* Action Buttons inside Table */
+  table button,
+  .ack-chk {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    margin: 0 4px;
+    white-space: nowrap;
+  }
+  
+  table button:hover {
+    background-color: #535353;
+  }
+  
+  table button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .ack-chk {
+    background-color: green;
+    cursor: inherit;
+    word-wrap: normal;
+  }
+  
+  /* Responsive Rules */
+  @media (max-width: 768px) {
+    thead th,
+    tbody td {
+      font-size: 0.85rem;
+      padding: 10px 12px;
+    }
+  
+    table button {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+    }
+  }
+  
+  /* Small devices: Stack table on very narrow screens */
+  @media (max-width: 480px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+  
+    thead {
+      display: none;
+    }
+  
+    tbody tr {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 8px;
+      background-color: #fff;
+    }
+  
+    tbody td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #eee;
+    }
+  
+    tbody td::before {
+      /* content: attr(data-label); */
+      font-weight: 600;
+      margin-right: 1rem;
+      flex-basis: 40%;
+      color: #555;
+    }
+  
+    table button {
+      margin-top: 6px;
+      width: 100%;
+      padding: 8px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Headings */
+  h2,
+  h3,
+  h4 {
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+  
